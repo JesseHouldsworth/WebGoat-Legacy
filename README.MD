@@ -1,6 +1,6 @@
 # Important Information!!!
 [![DepShield Badge](https://depshield.sonatype.org/badges/JesseHouldsworth/WebGoat-Legacy/depshield.svg)](https://depshield.github.io)
-mckesson Thank you for downloading WebGoat!  This is the WebGoat Legacy version which is essentially the WebGoat 5 with a new UI. 
+Thank you for downloading WebGoat!  This is the WebGoat Legacy version which is essentially the WebGoat 5 with a new UI. 
 
 This program is a demonstration of common server-side application flaws. The
 exercises are intended to be used by people to learn about application
