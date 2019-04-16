@@ -20,30 +20,7 @@ node () {
 
    }
    stage('Build') {
-      // Run the maven build
-      try{
-        if (isUnix()) {
-           sh "./mvnw  -B -Dmaven.test.failure.ignore -Drat.skip=true -f pom.xml clean package -U"
-        } else {
-           bat(/mvnw.cmd -B -Dmaven.test.failure.ignore -Drat.skip=true clean package/)
-        }
-        
-        currentBuild.result = 'SUCCESS'
-
-      }catch(Exception err){
-        currentBuild.result = 'FAILURE'
-      
-      }
-
-      sh "echo current build status ${currentBuild.result}"
-      /*
-      if (currentBuild.result == 'FAILURE') {
-        postGitHub(commitId, 'failure', 'build', 'Build failed')
-        return
-      } else {
-        postGitHub(commitId, 'success', 'build', 'Build succeeded')
-      } */
-      
+      sh 'mvn clean package'     
    }
 
    
